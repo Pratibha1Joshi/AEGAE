@@ -30,7 +30,7 @@ from sklearn import metrics
 import matplotlib.pyplot as plt
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--gnnlayers', type=int, default=3, help="Number of gnn layers")
+parser.add_argument('--gnnlayers', type=int, default=4, help="Number of gnn layers")
 parser.add_argument('--linlayers', type=int, default=1, help="Number of hidden layers")
 parser.add_argument('--epochs', type=int, default=400, help='Number of epochs to train.')
 parser.add_argument('--dims', type=int, default=[500], help='Number of units in hidden layer 1.')
