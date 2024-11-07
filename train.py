@@ -112,7 +112,7 @@ def gae_for(args):
     adj_norm_s = preprocess_graph(adj, args.gnnlayers, norm='sym', renorm=True)
     sm_fea_s = sp.csr_matrix(features).toarray()
     
-    print('Laplacian Smoothing...')
+    print('Laplacian Regularization...')
     for a in adj_norm_s:
         sm_fea_s = a.dot(sm_fea_s)
     adj_1st = (adj + sp.eye(n)).toarray()
