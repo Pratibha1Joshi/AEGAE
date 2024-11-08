@@ -4,17 +4,14 @@ Community detection is a vital task in network analysis, involving the identific
 
 **Environment Info**
 
-Python 3.7.4
+Python 3 (Recommend to use Anaconda)
 
-PyTorch 1.4.0
+NVIDIA GPU + CUDA
 
-CUDA 10.2
-
-**Then, run the command:**
-
+Python packages:
 pip install -r requirements.txt
 
-**RUN**
+**Training**
 
 python train.py --dataset cora --gnnlayers 4 --upth_st 0.015 --lowth_st 0.1 --upth_ed 0.001 --lowth_ed 0.5
 
