@@ -38,8 +38,8 @@ Cora
 Citeseer
 Pubmed
 wiki
+These datasets are publicay available and you can also download it form the data folder. Change the directory accordingly.
 
-git clone https://github.com/Pratibha1Joshi/AEGAE.git
 cd AEGAE
 pip install -r requirements.txt
 
