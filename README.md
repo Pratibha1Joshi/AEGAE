@@ -44,11 +44,15 @@ cd AEGAE
 pip install -r requirements.txt
 
 Training the Model
+
 Run the main script with the desired dataset:
 
 **Training**
 
 python train.py --dataset cora --gnnlayers 4 --upth_st 0.015 --lowth_st 0.1 --upth_ed 0.001 --lowth_ed 0.5
 
-Modify config.py to adjust parameters like learning rate, batch size, or regularization.
+**visulaization of the result**
+
+python clustering_metric.py 
+
 **The source code and datasets for this study are openly available at **https://doi.org/10.5281/zenodo.14038245****
