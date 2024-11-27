@@ -12,9 +12,10 @@ This repository provides the implementation of the AEGAE method for community de
 
 **Abstract**
 
-The community detection is a vital task in network analysis. It identify the group of nodes with unique behaviors. The node in attributed graphs has additional features. The feature poses challenges in community detection because it requires structural and attribute information. In this work the Attribute-Embedded Graph Autoencoder (AEGAE) method for community detection is proposed. For the community detection the AEGAE method performed in two key functions. The first uses Laplacian regularization to capture network topology. It filters out high-frequency noise, producing signals that better represent the graph structure. In second Graph Autoencoder perorms the node embedding. The embedding captures essential features of the graph, spectral clustering is applied to similarity matrices of the features. The performance AEGAE is evaluated on four real world datasets. The proposed method outperforms existing methods in terms of evaluation parameters like Adjusted Rand Index (ARI), Accuracy (ACC), and Normalized Mutual Information (NMI). 
+The community detection is a crucial task in network analysis. It identifies  groups of nodes within a network that exhibits distinct behavior compared to other groups. The structural and attributed features posE challenges in attributed graph for the community identification. In this work, the Attribute-Embedded Graph Autoencoder (AEGAE) method for community detection is proposed. The AEGAE method for community detection comprises two key functions. Initially, the network is represented as an adjacency matrix. The Laplacian matrix of the graph is computed that captures  the graph topological information. Further, the eigen decomposition of Laplacain matrix is performed to obtain Laplacian regularized matrix. This process reduces the noise from the graph and the Rayleigh quotient is used to measure the regularity of the graph. The Graph Autoencoder is applied on the regularized signal matrix to generate node embeddings that captures the essential structural features of the graph. The pairwise cosine similarity matrix with reduced dimensionality is obtained from the embeddings. Moreover, the node pairs are randomly selected to train the GAE model. To obtain optimal embedding the cross-entropy loss is computed iteratively. Further, to obtain optimal solution the GAE is trained with varying threshold values. The similarity matrix is recomputed based on the optimal embedding. The Spectral clustering method is applied on the optimal similarity matrix to reveal the hidden communities in the attributed graph. The performance of the AEGAE is evaluated on four real world datasets. The proposed method outperforms with respect to existing methods in terms of evaluation parameters like Adjusted Rand Index (ARI), Accuracy (ACC), and Normalized Mutual Information (NMI).  
 
-![image](https://github.com/user-attachments/assets/7068e857-2911-4201-99a4-67e5c8b480a3)
+![image](https://github.com/user-attachments/assets/36f2c6ec-1b1a-4204-8c7b-2f11db6ed111)
+
 
 
 ## Dependencies
@@ -38,7 +39,7 @@ Cora
 Citeseer
 Pubmed
 wiki
-These datasets are publicay available and you can also download it form the data folder. Change the directory accordingly.
+These datasets are publicaly available and you can also download it form the data folder. Change the directory accordingly.
 
 cd AEGAE
 pip install -r requirements.txt
